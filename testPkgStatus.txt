@@ -1,0 +1,502 @@
+Package: libws-commons-util-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.0.1-7
+Description: Common utilities from the Apache Web Services Project
+ This is a small collection of utility classes, that allow high
+ performance XML processing based on SAX.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://ws.apache.org/commons/util/
+
+Package: python-pkg-resources
+Status: install ok installed
+Priority: optional
+Section: python
+Installed-Size: 175
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: distribute
+Version: 0.6.24-1ubuntu1
+Replaces: python2.3-setuptools, python2.4-setuptools
+Provides: python2.6-setuptools, python2.7-setuptools
+Depends: python (>= 2.6), python (<< 2.8)
+Suggests: python-distribute, python-distribute-doc
+Conflicts: python-setuptools (<< 0.6c8-3), python2.3-setuptools (<< 0.6b2), python2.4-setuptools (<< 0.6b2)
+Description: Package Discovery and Resource Access using pkg_resources
+ The pkg_resources module provides an API for Python libraries to
+ access their resource files, and for extensible applications and
+ frameworks to automatically discover plugins.  It also provides
+ runtime support for using C extensions that are inside zipfile-format
+ eggs, support for merging packages that have separately-distributed
+ modules or subpackages, and APIs for managing Python's current
+ "working set" of active packages.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Homepage: http://packages.python.org/distribute
+Python-Version: 2.6, 2.7
+
+Package: tcpd
+Status: install ok installed
+Multi-Arch: foreign
+Priority: optional
+Section: net
+Installed-Size: 132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: tcp-wrappers
+Version: 7.6.q-21
+Replaces: libwrap0 (<< 7.6-8)
+Depends: libc6 (>= 2.4), libwrap0 (>= 7.6-4~)
+Description: Wietse Venema's TCP wrapper utilities
+ Wietse Venema's network logger, also known as TCPD or LOG_TCP.
+ .
+ These programs log the client host name of incoming telnet,
+ ftp, rsh, rlogin, finger etc. requests.
+ .
+ Security options are:
+  - access control per host, domain and/or service;
+  - detection of host name spoofing or host address spoofing;
+  - booby traps to implement an early-warning system.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
+Package: libbsf-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 130
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1:2.4.0-5
+Depends: libapache-pom-java
+Suggests: bsh, libxalan2-java, rhino
+Description: Bean Scripting Framework to support scripting languages in Java
+ Bean Scripting Framework (BSF) is a set of Java classes which provides
+ scripting language support within Java applications, and access to Java
+ objects and methods from scripting languages. BSF allows one to write JSPs in
+ languages other than Java while providing access to the Java class library. In
+ addition, BSF permits any Java application to be implemented in part (or
+ dynamically extended) by a language that is embedded within it. This is
+ achieved by providing an API that permits calling scripting language engines
+ from within Java, as well as an object registry that exposes Java objects to
+ these scripting language engines.
+ .
+ BSF supports these scripting languages:
+  * Python (using Jython)
+  * JavaScript (using rhino)
+  * XSLT Stylesheets (as a component of Apache XML project's Xalan and Xerces)
+  * BeanShell (using bsh) via its own bsf adapter
+ .
+ Support for Tcl, NetRexx is not available in this Debian
+ package since Jacl, NetRexx (non-free) are not packaged.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://jakarta.apache.org/bsf/
+
+Package: libaspectj-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 11710
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: aspectj
+Version: 1.6.12+dfsg-3
+Replaces: aspectj (<< 1.6.10+dfsg-1)
+Suggests: aspectj
+Conflicts: aspectj (<< 1.6.10+dfsg-1)
+Description: aspect-oriented extension for Java - library
+ AspectJ enables the clean modularization of crosscutting concerns
+ such as: error checking and handling, synchronization, context-sensitive
+ behavior, performance optimizations, monitoring and logging, debugging
+ support, multi-object protocols.
+ .
+ This package provides the JAR libraries of aspectj.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://www.eclipse.org/aspectj
+
+Package: libslf4j-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 315
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.6.4-1
+Suggests: libcommons-logging-java, liblog4j1.2-java
+Description: Simple Logging Facade for Java
+ The Simple Logging Facade for Java (or SLF4J) is intended to serve as
+ a simple facade for various logging APIs allowing to the end-user to
+ plug in the desired implementation at deployment time. SLF4J also
+ allows for a gradual migration path away from Apache Commons
+ Logging (CL)
+ .
+ Logging API implementations can either choose to implement the SLF4J
+ interfaces directly, e.g. logback or SimpleLogger. Alternatively, it
+ is possible (and rather easy) to write SLF4J adapters for the given
+ API implementation, e.g. Log4jLoggerAdapter or JDK14LoggerAdapter.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://www.slf4j.org/
+
+Package: libplexus-sec-dispatcher-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 89
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: plexus-sec-dispatcher
+Version: 1.3.1-5
+Depends: junit (>= 3.8.2), libplexus-cipher-java, libplexus-container-default-java, libplexus-utils-java
+Suggests: libplexus-sec-dispatcher-java-doc
+Description: Plexus Security Dispatcher Component used by Maven
+ The Plexus project provides a full software stack for creating and
+ executing software projects. Based on the Plexus container, the applications
+ can utilise component-oriented programming to build modular, reusable
+ components that can easily be assembled and reused.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: https://github.com/sonatype/plexus-sec-dispatcher
+
+Package: libtext-wrapi18n-perl
+Status: install ok installed
+Priority: required
+Section: perl
+Installed-Size: 68
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.06-7
+Depends: libtext-charwidth-perl
+Description: internationalized substitute of Text::Wrap
+ This module is a substitution for Text::Wrap, supporting
+ multibyte characters such as UTF-8, EUC-JP, and GB2312, fullwidth
+ characters such as east Asian characters, combining characters
+ such as diacritical marks and Thai, and languages which don't
+ use whitespaces between words such as Chinese and Japanese.
+ .
+ It provides wrap().
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Homepage: http://search.cpan.org/search?module=Text::WrapI18N
+
+Package: java-common
+Status: install ok installed
+Multi-Arch: foreign
+Priority: optional
+Section: java
+Installed-Size: 242
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.43ubuntu2
+Suggests: default-jre, equivs
+Description: Base of all Java packages
+ This package must be installed in the system if a Java environment
+ is desired. It covers useful information for Java users in
+ Debian GNU/Linux, including:
+  * The Java policy document which describes the layout of Java support in
+    Debian and how Java packages should behave.
+  * The Debian-Java-FAQ which provides information on the status of
+    Java support in Debian, available compilers, virtual machines, Java
+    programs and libraries as well as on legal issues.
+  * Information on how to create dummy packages to fulfill java2
+    requirements.
+Original-Maintainer: Debian Java Mailing List <debian-java@lists.debian.org>
+
+Package: libantlr-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 493
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: antlr
+Version: 2.7.7+dfsg-3
+Replaces: antlr (<< 2.7.7-8)
+Breaks: antlr (<< 2.7.7-8)
+Description: language tool for constructing recognizers, compilers etc (java library)
+ ANTLR, ANother Tool for Language Recognition, (formerly PCCTS) is
+ a language tool that provides a framework for constructing recognizers,
+ compilers, and translators from grammatical descriptions containing C++
+ or Java actions [You can use PCCTS 1.xx to generate C-based parsers].
+ .
+ This package contains the java libraries without a dependency on any runtime
+ to be able to bootstrap gcj without a dependency on a java runtime.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://www.antlr2.org/
+
+Package: libhttp-date-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 6.00-1
+Replaces: libwww-perl (<< 6.00)
+Depends: perl, libtimedate-perl
+Breaks: libwww-perl (<< 6.00)
+Description: module of date conversion routines
+ HTTP::Date provides functions that deal the date formats used by the HTTP
+ protocol (and then some more). Only the first two functions, time2str() and
+ str2time(), are exported by default.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: http://search.cpan.org/dist/HTTP-Date/
+
+Package: libio-stringy-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 273
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: io-stringy
+Version: 2.110-5
+Depends: perl
+Description: Perl modules for IO from scalars and arrays
+ The libio-stringy-perl package (which corresponds to the CPAN package
+ IO-stringy) provides the following Perl modules:
+   IO::AtomicFile    Write a file which is updated atomically
+   IO::Lines         I/O handle to read/write to array of lines
+   IO::Scalar        I/O handle to read/write to a string
+   IO::ScalarArray   I/O handle to read/write to array of scalars
+   IO::Wrap          Wrap old-style FHs in standard OO interface
+   IO::WrapTie       Tie your handles & retain full OO interface
+Original-Maintainer: Bart Martens <bartm@debian.org>
+Homepage: http://search.cpan.org/dist/IO-stringy/
+
+Package: debconf
+Status: install ok installed
+Multi-Arch: foreign
+Priority: required
+Section: admin
+Installed-Size: 609
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: all
+Version: 1.5.42ubuntu1
+Replaces: debconf-tiny
+Provides: debconf-2.0
+Pre-Depends: perl-base (>= 5.6.1-4)
+Recommends: apt-utils (>= 0.5.1), debconf-i18n
+Suggests: debconf-doc, debconf-utils, whiptail | dialog | gnome-utils, libterm-readline-gnu-perl, libgtk2-perl (>= 1:1.130), libnet-ldap-perl, perl, libqtgui4-perl, libqtcore4-perl
+Conflicts: apt (<< 0.3.12.1), cdebconf (<< 0.96), debconf-tiny, debconf-utils (<< 1.3.22), dialog (<< 0.9b-20020814-1), menu (<= 2.1.3-1), whiptail (<< 0.51.4-11), whiptail-utf8 (<= 0.50.17-13)
+Conffiles:
+ /etc/apt/apt.conf.d/70debconf 7e9d09d5801a42b4926b736b8eeabb73
+ /etc/bash_completion.d/debconf 8fa1862734fbe54d7178aaaa419f5a11
+ /etc/debconf.conf 8c0619be413824f1fc7698cee0f23811
+Description: Debian configuration management system
+ Debconf is a configuration management system for debian packages. Packages
+ use Debconf to ask questions when they are installed.
+Original-Maintainer: Debconf Developers <debconf-devel@lists.alioth.debian.org>
+
+Package: libhttpcore-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: httpcomponents-core
+Version: 4.1.4-1
+Provides: libhttpcore-nio-java
+Description: set of low level HTTP transport components for Java
+ HttpCore is a set of low level HTTP transport components that can be used
+ to build custom client and server side HTTP services with a minimal
+ footprint. HttpCore supports two I/O models:
+ .
+  - blocking I/O model, based on the classic Java I/O;
+  - non-blocking, event driven I/O model based on Java NIO.
+ .
+ The blocking I/O model may be more appropriate for data intensive, low
+ latency scenarios, whereas the non-blocking model may be more appropriate
+ for high latency scenarios where raw data throughput is less important
+ than the ability to handle thousands of simultaneous HTTP connections in
+ a resource efficient manner.
+Original-Maintainer: David Paleino <dapal@debian.org>
+Homepage: http://hc.apache.org/httpcomponents-core/index.html
+
+Package: liblog4j1.2-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 465
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: apache-log4j1.2
+Version: 1.2.16-3ubuntu1
+Suggests: liblog4j1.2-java-doc, libgnumail-java, libmx4j-java
+Description: Logging library for java
+ log4j is a tool to help the programmer output log statements to a variety of
+ output targets.
+ .
+ It is possible to enable logging at runtime without modifying the application
+ binary. The log4j package is designed so that log statements can remain in
+ shipped code without incurring a high performance cost.
+ .
+ One of the distinctive features of log4j is the notion of hierarchical
+ loggers. Using loggers it is possible to selectively control which log
+ statements are output at arbitrary granularity.
+ .
+ Log4j can output to: a file, a rolling file, a database with a JDBC driver,
+ many output  asynchronously, a JMS Topic, a swing based logging console,
+ the NT event log, /dev/null, a SMTP server (using javamail), a socket server,
+ syslog, telnet daemon and stdout.
+ .
+ The format of the output can be defined using one of the various layout
+ (or user defined layout) like: simple text, html, date, pattern defined and
+ XML.
+Homepage: http://logging.apache.org/log4j/1.2/
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+
+Package: libjaxp1.3-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 661
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.3.05-2ubuntu2
+Suggests: libjaxp1.3-java-gcj
+Conflicts: libxalan2-java (<= 2.7.1-3)
+Description: Java XML parser and transformer APIs (DOM, SAX, JAXP, TrAX)
+ xml-apis.jar from the Apache XML Commons project is used by the Xerces-J XML
+ parser and Xalan-J XSLT processor and specifies these APIs:
+  * Document Object Model (DOM) level 3
+  * Simple API for XML (SAX) 2.0.2
+  * Java APIs for XML Processing (JAXP) 1.3.04
+  * Transformation API for XML (TrAX) 1.3.04
+  * Document Object Model (DOM) Level 3 Load and Save
+  * JSR 206 Java API for XML Processing 1.3
+ .
+ These classes are also used in Sun's reference implementation. A GPL'ed
+ implementation of these APIs can be found in the libgnujaxp-java package.
+Homepage: http://java.sun.com/xml/jaxp/index.jsp
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+
+Package: libitext1-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 1315
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.4-5
+Description: Java Library to generate PDF on the Fly
+ iText is a library that allows you to generate PDF files on the fly.
+ The iText classes are very useful for people who need to generate read-only,
+ platform independent documents containing text, lists, tables and images.
+ The library is especially useful in combination with Java(TM)
+ technology-based Servlets: The look and feel of HTML is browser dependent;
+ with iText and PDF you can control exactly how your servlet's output will look.
+ iText requires JDK 1.2. It's available for free under a multiple license:
+ MPL and LGPL.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://www.lowagie.com/iText/
+
+Package: libelf1
+Status: install ok installed
+Multi-Arch: same
+Priority: optional
+Section: libs
+Installed-Size: 164
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: elfutils
+Version: 0.152-1ubuntu3
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Description: library to read and write ELF files
+ The libelf1 package provides a shared library which allows reading and
+ writing ELF files on a high level.  Third party programs depend on
+ this package to read internals of ELF files.  The programs of the
+ elfutils package use it also to generate new ELF files.
+ .
+ This library is part of elfutils.
+Homepage: https://fedorahosted.org/elfutils/
+Original-Maintainer: Kurt Roeckx <kurt@roeckx.be>
+
+Package: memtest86+
+Status: install ok installed
+Priority: optional
+Section: misc
+Installed-Size: 2404
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 4.20-1.1ubuntu1
+Depends: debconf (>= 0.5) | debconf-2.0
+Suggests: hwtools, memtester, kernel-patch-badram, memtest86, grub-pc | grub-legacy, mtools
+Conffiles:
+ /etc/grub.d/20_memtest86+ 6dc48efccb95680ab07349956a48fef3
+Description: thorough real-mode memory tester
+ Memtest86+ scans your RAM for errors.
+ .
+ This tester runs independently of any OS - it is run at computer
+ boot-up, so that it can test *all* of your memory.  You may want to
+ look at `memtester', which allows to test your memory within Linux,
+ but this one won't be able to test your whole RAM.
+ .
+ It can output a list of bad RAM regions usable by the BadRAM kernel
+ patch, so that you can still use your old RAM with one or two bad bits.
+ .
+ Memtest86+ is based on memtest86 3.0, and adds support for recent
+ hardware, as well as a number of general-purpose improvements,
+ including many patches to memtest86 available from various sources.
+ .
+ Both memtest86 and memtest86+ are being worked on in parallel.
+Homepage: http://www.memtest.org/
+Original-Maintainer: Yann Dirson <dirson@debian.org>
+
+Package: dash
+Essential: yes
+Status: install ok installed
+Priority: required
+Section: shells
+Installed-Size: 215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.5.7-2ubuntu2
+Depends: debianutils (>= 2.15), dpkg (>= 1.15.0)
+Pre-Depends: libc6 (>= 2.14)
+Description: POSIX-compliant shell
+ The Debian Almquist Shell (dash) is a POSIX-compliant shell derived
+ from ash.
+ .
+ Since it executes scripts faster than bash, and has fewer library
+ dependencies (making it more robust against software or hardware
+ failures), it is used as the default system shell on Debian systems.
+Homepage: http://gondor.apana.org.au/~herbert/dash/
+Original-Maintainer: Gerrit Pape <pape@smarden.org>
+
+Package: libsocket6-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 94
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.23-1build2
+Depends: perl (>= 5.14.2-3build1), perlapi-5.14.2, libc6 (>= 2.4), perl-base (>= 5.8.0-10)
+Description: Perl extensions for IPv6
+ This module supports getaddrinfo() and getnameinfo() to intend to enable
+ protocol independent programming. If your environment supports IPv6,
+ IPv6 related defines such as AF_INET6 are included.
+Original-Maintainer: Masahito Omote <omote@debian.org>
+
+Package: libpolkit-gobject-1-0
+Status: install ok installed
+Multi-Arch: same
+Priority: optional
+Section: libs
+Installed-Size: 151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: policykit-1
+Version: 0.104-1ubuntu1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.31.8)
+Pre-Depends: multiarch-support
+Breaks: libpolkit-agent-1-0 (<< 0.99), libpolkit-backend-1-0 (<< 0.99), libpolkit-gtk-1-0 (<< 0.99), policykit-1 (<< 0.99)
+Description: PolicyKit Authorization API
+ PolicyKit is a toolkit for defining and handling the policy that
+ allows unprivileged processes to speak to privileged processes.
+ .
+ This package contains a library for accessing PolicyKit.
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
