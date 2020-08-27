@@ -5,7 +5,7 @@ const cors = require('cors');
 const logger = require('./middleware/logger');
 const { getPackageDictionary } = require('./controllers/packageReader');
 
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, 'build')));
@@ -30,4 +30,4 @@ app.get('/', (req, res) => {
 app.use(cors());
 app.use(logger);
 
-app.listen(port, () => console.log(`Server running on port ${port}!`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}!`));
