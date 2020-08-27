@@ -23,8 +23,8 @@ app.get('/api/packages', async (req, res) => {
   res.json(packageDictionary);
 });
 
-app.get('/', (req, res) => {
-  res.send('henlo frendos');
+app.get('/*', (req, res) => {
+  res.sendFile(path.resolve(`${__dirname}/build/index.html`));
 });
 
 app.use(cors());
