@@ -21,41 +21,42 @@ const App = () => {
     getPackageInfo();
   }, []);
 
-  console.log(packageInfo);
-  console.log(typeof packageInfo);
-  if (packageInfo === null) {
+  if (!packageInfo) {
     return (
-      <div>
-        <h2>Package information</h2>
-        <div>loading packages</div>
+      <div className='container'>
+        <h1>Package information</h1>
+        <div>Loading package information...</div>
       </div>
     );
   }
 
   const pkgArray = Object.entries(packageInfo).sort();
-  console.log(pkgArray);
 
   return (
     <Router>
       <Switch>
-        <Route
-          exact
-          path='/'
-          render={() => {
-            return <Home pkgArray={pkgArray} />;
-          }}
-        />
-        <Route
-          path='/:name'
-          render={({ match }) => {
-            return (
-              <PackageDetails
-                name={match.params.name}
-                details={pkgArray.find((p) => p[1].name === match.params.name)}
-              />
-            );
-          }}
-        />
+        <div className='container'>
+          <Route
+            exact
+            path='/'
+            render={() => {
+              return <Home pkgArray={pkgArray} />;
+            }}
+          />
+          <Route
+            path='/:name'
+            render={({ match }) => {
+              return (
+                <PackageDetails
+                  name={match.params.name}
+                  details={pkgArray.find(
+                    (p) => p[1].name === match.params.name
+                  )}
+                />
+              );
+            }}
+          />
+        </div>
       </Switch>
     </Router>
   );

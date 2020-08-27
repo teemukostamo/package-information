@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const PackageList = ({ name, details }) => {
+const PackageList = ({ name }) => {
   return (
     <div>
-      <h1>
+      <h3>
         <Link to={`/${name}`}>{name}</Link>{' '}
-      </h1>
+      </h3>
     </div>
   );
 };
