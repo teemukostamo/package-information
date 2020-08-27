@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build:ui": "rm -rf client/build && cd client && npm run build && cp -r build ../server",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "nodemon server"
