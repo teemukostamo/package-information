@@ -1,4 +1,3 @@
-const asyncHandler = require('../middleware/asyncHandler');
 const ErrorResponse = require('../middleware/errorResponse');
 const fs = require('fs');
 const { promisify } = require('util');

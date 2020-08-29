@@ -35,28 +35,30 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <div className='container'>
-          <Route
-            exact
-            path='/'
-            render={() => {
-              return <Home pkgArray={pkgArray} />;
-            }}
-          />
-          <Route
-            path='/:name'
-            render={({ match }) => {
-              return (
-                <PackageDetails
-                  name={match.params.name}
-                  details={pkgArray.find(
-                    (p) => p[1].name === match.params.name
-                  )}
-                />
-              );
-            }}
-          />
-        </div>
+        <React.Fragment>
+          <div className='container'>
+            <Route
+              exact
+              path='/'
+              render={() => {
+                return <Home pkgArray={pkgArray} />;
+              }}
+            />
+            <Route
+              path='/:name'
+              render={({ match }) => {
+                return (
+                  <PackageDetails
+                    name={match.params.name}
+                    details={pkgArray.find(
+                      (pkg) => pkg[1].name === match.params.name
+                    )}
+                  />
+                );
+              }}
+            />
+          </div>
+        </React.Fragment>
       </Switch>
     </Router>
   );
