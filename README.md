@@ -26,7 +26,7 @@ In production the Node.js server serves the static production build of the React
 
 - To create a production build of the client and serve the static files with the server, run `npm run build:ui`.
 
-- To create a production build of the client and deploy the application to Heroku, set up a Heroku remote for the repository and run `npm run deploy:full`.
+- To create a production build of the client and deploy the application to Heroku, set up a Heroku remote for the repository, run `heroku config:set PORT=5000` to set the PORT varible, and run `npm run deploy:full`.
 
 ## Docker
 
