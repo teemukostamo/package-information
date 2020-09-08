@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
-
 const logger = require('./middleware/logger');
+
 const { getPackageDictionary } = require('./controllers/packageReader');
 
 const PORT = process.env.PORT || 5000;
@@ -19,7 +19,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/api/packages', async (req, res) => {
-  const packageDictionary = await getPackageDictionary('./pkgStatus.txt');
+  const packageDictionary = await getPackageDictionary('status.real');
   res.json(packageDictionary);
 });
 

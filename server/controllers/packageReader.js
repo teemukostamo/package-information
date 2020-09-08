@@ -1,4 +1,3 @@
-const ErrorResponse = require('../middleware/errorResponse');
 const fs = require('fs');
 const { promisify } = require('util');
 
@@ -6,18 +5,15 @@ const readFile = promisify(fs.readFile);
 
 const getPackageDictionary = async (filePath) => {
   try {
-    const content = await readFile(filePath, 'utf8');
-    const packages = content
+    const data = await readFile(filePath, 'utf8');
+
+    // grab the chunks that are between line breaks and put them in an array
+    const packageDictionary = data
+      // split by line breaks
       .split('\n\n')
       .filter((block) => block.trim() !== '')
+      // parse names, descriptions and dependancies into an array
       .map(parsePackage);
-
-    const packageDictionary = packages.reduce((dictionary, pkg) => {
-      return {
-        ...dictionary,
-        [pkg.name]: pkg,
-      };
-    }, {});
 
     // Calculate dependentPackages property
     Object.keys(packageDictionary).forEach((name) => {
@@ -58,6 +54,7 @@ const parsePackage = (text, index) => {
 };
 
 const parseName = (text) => {
+  // grab the line that starts with "Package: " and ends in line break
   const matches = text.match(/Package:\s(.+)\n/);
   if (matches && matches[1]) {
     return matches[1];
@@ -74,12 +71,13 @@ const parseDescription = (text) => {
 };
 
 const parseDependencies = (text) => {
-  const matches = text.match(/\nDepends:\s(.+)\n/);
+  const matches = text.match(/\nDepends:\s(.+)\n/); // get the dependencies line
   if (!matches || !matches[1]) {
     // No dependencies for this package
     return [];
   }
-  const dependenciesLine = matches[1];
+
+  const dependenciesLine = matches[1]; // put dependenciesline in variable
 
   // 'libc6 (>= 2.2.5)' -> 'libc6'
   const parsePackageName = (packageString) => packageString.split(' ').shift();

@@ -1,12 +1,12 @@
 import React from 'react';
 import PackageList from './PackageList';
 
-const Home = ({ pkgArray }) => {
+const Home = ({ packageInfo }) => {
   return (
     <div>
       <h1>Package information</h1>
-      {pkgArray.map((pkg) => (
-        <PackageList key={pkg[0]} name={pkg[0]} details={pkg[1]} />
+      {packageInfo.map((pkg) => (
+        <PackageList key={pkg.name} name={pkg.name} />
       ))}
     </div>
   );

@@ -13,7 +13,11 @@ const App = () => {
     const getPackageInfo = async () => {
       try {
         const response = await axios.get('/api/packages');
-        setPackageInfo(response.data);
+        setPackageInfo(
+          response.data.sort((a, b) =>
+            a.name > b.name ? 1 : b.name > a.name ? -1 : 0
+          )
+        );
       } catch (error) {
         console.log(error);
       }
@@ -30,7 +34,7 @@ const App = () => {
     );
   }
 
-  const pkgArray = Object.entries(packageInfo).sort();
+  // const pkgArray = Object.entries(packageInfo).sort();
 
   return (
     <Router>
@@ -41,7 +45,7 @@ const App = () => {
               exact
               path='/'
               render={() => {
-                return <Home pkgArray={pkgArray} />;
+                return <Home packageInfo={packageInfo} />;
               }}
             />
             <Route
@@ -50,8 +54,8 @@ const App = () => {
                 return (
                   <PackageDetails
                     name={match.params.name}
-                    details={pkgArray.find(
-                      (pkg) => pkg[1].name === match.params.name
+                    details={packageInfo.find(
+                      (pkg) => pkg.name === match.params.name
                     )}
                   />
                 );

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 const PackageDetails = ({ name, details }) => {
   const dependencies = () => {
-    if (details[1].dependencies.length > 0) {
+    if (details.dependencies.length > 0) {
       return (
         <ul>
-          {details[1].dependencies.map((d) => (
+          {details.dependencies.map((d) => (
             <li key={d.main}>
               <Link to={`/${d.main}`}>{d.main}</Link>{' '}
             </li>
@@ -18,7 +18,7 @@ const PackageDetails = ({ name, details }) => {
   };
 
   const dependentPackages = () => {
-    if (details[1].dependentPackages.length > 0) {
+    if (details.dependentPackages.length > 0) {
       return (
         <ul>
           {details[1].dependentPackages.map((d) => (
@@ -35,7 +35,7 @@ const PackageDetails = ({ name, details }) => {
   return (
     <div>
       <h2>{name}</h2>
-      {details[1].description}
+      {details.description}
       <h4>Dependencies:</h4>
       {dependencies()}
       <h4>Dependent packages:</h4>
